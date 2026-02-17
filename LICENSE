@@ -1,5 +1,10 @@
 # PMT Past Paper Downloader
+
 Automatically scrapes and downloads past papers from [Physics & Maths Tutor](https://www.physicsandmathstutor.com) and organises them into folders by subject, paper number, and spec.
+
+## Setup
+
+No installs needed. Requires Python 3.6+.
 
 ## Usage
 
@@ -12,6 +17,8 @@ python download_papers.py
 **Example input.txt:**
 ```
 https://www.physicsandmathstutor.com/past-papers/gcse-physics/edexcel-paper-1/
+https://www.physicsandmathstutor.com/past-papers/gcse-physics/edexcel-paper-2/
+https://www.physicsandmathstutor.com/past-papers/gcse-chemistry/edexcel-paper-1/
 ```
 
 ## Output Structure
@@ -36,4 +43,4 @@ downloaded_papers/
 
 - Re-running is safe, already downloaded files are skipped
 - Supports GCSE, IGCSE, and A-Level pages
-- Multiple files download in parallel (may not work on garbage hardware)
+- 4 files download in parallel
