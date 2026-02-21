@@ -1,39 +1,28 @@
-# PMT Past Paper Downloader
-Automatically scrapes and downloads past papers from [Physics & Maths Tutor](https://www.physicsandmathstutor.com) and organises them into folders by subject, paper number, and spec.
+# GCSE/IGCSE/A-Level Past-Papers Downloader
+Automatically scrapes and downloads past-papers from [Physics & Maths Tutor](https://www.physicsandmathstutor.com) and organises them into folders by subject, paper number, and spec.
+
+## Requirements
+
+[Python 3.7+](https://www.python.org/downloads/), no extra libraries needed.
 
 ## Usage
 
-Add one PMT past papers page URL per line to `input.txt`, then run:
-
-```
-python download_papers.py
+```bash
+python main.py
 ```
 
-**Example input.txt:**
-```
-https://www.physicsandmathstutor.com/past-papers/gcse-physics/edexcel-paper-1/
-```
+## Features
 
-## Output Structure
-
-```
-downloaded_papers/
-  Physics (GCSE)/
-    Paper 1/
-      New-Spec/
-        Question-Papers/
-        Mark-Schemes/
-      Old-Spec/
-        Question-Papers/
-        Mark-Schemes/
-    Paper 2/
-      ...
-  Chemistry (GCSE)/
-    ...
-```
+- Choose specific subjects to download
+- Auto-organises files into folders by subject, board, paper, and type
+- Rate limited to avoid overloading the server
+- Failed downloads are retried on re-run
 
 ## Notes
 
-- Re-running is safe, already downloaded files are skipped
-- Supports GCSE, IGCSE, and A-Level pages
-- Multiple files download in parallel (may not work on garbage hardware)
+- Re-running the script is safe. Progress is saved to `.pmt_progress.json` in your output folder — files already downloaded are skipped, and any that failed are automatically retried.
+
+
+---
+[License](LICENSE)
+Mu_rpy © 2026
